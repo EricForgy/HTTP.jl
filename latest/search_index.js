@@ -77,7 +77,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "HTTP.Handlers.HandlerFunction",
     "category": "Type",
-    "text": "HandlerFunction(f::Function)\n\nA Function-wrapper type that is a subtype of Handler. Takes a single Function as an argument. The provided argument should be of the form f(request, response) => Response, i.e. it accepts both a Request and Response and returns a Response. \n\n\n\n"
+    "text": "HandlerFunction(f::Function)\n\nA Function-wrapper type that is a subtype of Handler. Takes a single Function as an argument. The provided argument should be of the form f(request, response) => Response, i.e. it accepts both a Request and Response and returns a Response.\n\n\n\n"
 },
 
 {
@@ -93,7 +93,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "HTTP.Handlers.register!",
     "category": "Function",
-    "text": "HTTP.register!(r::Router, url, handler) HTTP.register!(r::Router, m::Union{Method, String}, url, handler)\n\nFunction to map request urls matching url and an optional method m to another handler::HTTP.Handler. URLs are registered one at a time, and multiple urls can map to the same handler. Methods can be passed as a string \"GET\" or enum object directly HTTP.GET. The URL can be passed as a String or HTTP.URI object directly. Requests can be routed based on: method, scheme, hostname, or path. The following examples show how various urls will direct how a request is routed by a server:\n\n\"http://*\": match all HTTP requests, regardless of path\n\"https://*\": match all HTTPS requests, regardless of path\n\"google\": regardless of scheme, match requests to the hostname \"google\"\n\"google/gmail\": match requests to hostname \"google\", and path starting with \"gmail\"\n\"/gmail\": regardless of scheme or host, match any request with a path starting with \"gmail\"\n\"/gmail/userId/*/inbox: match any request matching the path pattern, \"*\" is used as a wildcard that matches any value between the two \"/\"\n\n\n\n"
+    "text": "HTTP.register!(r::Router, url, handler) HTTP.register!(r::Router, m::Union{HTTP.Method, String}, url, handler)\n\nFunction to map request urls matching url and an optional method m to another handler::HTTP.Handler. URLs are registered one at a time, and multiple urls can map to the same handler. Methods can be passed as a string \"GET\" or enum object directly HTTP.GET. The URL can be passed as a String or HTTP.URI object directly. Requests can be routed based on: method, scheme, hostname, or path. The following examples show how various urls will direct how a request is routed by a server:\n\n\"http://*\": match all HTTP requests, regardless of path\n\"https://*\": match all HTTPS requests, regardless of path\n\"google\": regardless of scheme, match requests to the hostname \"google\"\n\"google/gmail\": match requests to hostname \"google\", and path starting with \"gmail\"\n\"/gmail\": regardless of scheme or host, match any request with a path starting with \"gmail\"\n\"/gmail/userId/*/inbox: match any request matching the path pattern, \"*\" is used as a wildcard that matches any value between the two \"/\"\n\n\n\n"
 },
 
 {
